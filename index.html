@@ -1,0 +1,19 @@
+In html.js
+
+var html = require('simple-html-index')
+
+html({ title: 'hello', entry: 'bundle.js' })
+  .pipe(process.stdout)
+Now run node html.js > index.html and you would end up with a file that looks like this: (after formatting)
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>hello</title>
+  <meta charset="utf-8">
+</head>
+<body>
+  <script src="bundle.js"></script>
+</body>
+</html>
+Usage
